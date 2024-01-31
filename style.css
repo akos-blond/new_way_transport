@@ -1,0 +1,242 @@
+@font-face {
+  font-family: "Ethno";
+  src: url("font/ethnocentric\ rg.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(43, 19, 59, 0.5)
+    ),
+    url(img/background.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+header {
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  padding: 10px;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header nav {
+  font-size: 1rem;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+
+header img {
+  width: 25vh;
+}
+
+header a {
+  font-family: "Ethno";
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  color: black;
+  text-shadow: 1px 1px 30px rgb(0, 0, 0);
+  font-size: 1.5vh;
+}
+
+header .menu a:hover {
+  background: rgba(43, 19, 59, 0.5);
+  color: aliceblue;
+  border-radius: 5px;
+}
+
+main {
+  padding: 1vw 10vw;
+  text-align: center;
+  max-width: fit-content;
+}
+/*hamburger menu*/
+
+header .toggle-menu,
+header .toggle-menu + label {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  header .menu {
+    grid-column: span 2;
+    display: none;
+  }
+
+  header .toggle-menu + label {
+    display: flex;
+    flex-direction: column;
+    justify-self: end;
+    gap: 8px;
+    width: 30px;
+  }
+
+  header .toggle-menu + label span {
+    display: block;
+    background: black;
+    height: 3px;
+  }
+
+  header .toggle-menu:checked ~ .menu {
+    display: block;
+  }
+
+  header ul .submenu {
+    position: static;
+    padding-left: 40px;
+  }
+
+  header ul {
+    display: block;
+  }
+}
+
+/* Oldal tartalma */
+
+.carousel-caption {
+  padding-left: 11%;
+}
+
+h5 {
+  font-family: "Ethno";
+  background-color: black;
+  max-width: fit-content;
+  font-size: 1.5vw;
+}
+
+.carousel-caption p {
+  font-family: "Ethno";
+  background-color: white;
+  color: #000;
+  max-width: fit-content;
+  font-size: 0.8vw;
+  text-align: left;
+}
+
+.welcome p {
+  font-family: "Ethno";
+  text-align: center;
+  color: white;
+  margin: 10px 0 40px 0;
+  font-size: 1.8vw;
+  text-shadow: 2px 4px 3px black;
+}
+.mainContent {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.card {
+  border-radius: 10px;
+  background-color: ghostwhite;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.4);
+  margin-right: 20px;
+  
+}
+
+
+.number1 img,
+.number2 img {
+  border-radius: 10px;
+  height: 300px;
+}
+
+.number3 img,
+.number4 img {
+  border-radius: 10px;
+  height: 500px;
+}
+
+.card-title {
+  background: none;
+  color: rgb(74, 0, 143);
+}
+
+.card-text {
+  font-size: 1.3vw;
+  text-align: justify;
+  font-weight: 500;
+  
+}
+
+button{
+  margin-top: 2.5vw;
+  font-family: "Ethno";
+  font-size: 0.8vw;
+  padding: 5px;
+  background-color: rgb(74, 0, 143);
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+footer {
+  font-family: "Ethno";
+  color: white;
+  text-shadow: 2px 3px 6px black;
+  text-align: center;
+  font-size: 0.7vw;
+  letter-spacing: 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: max-content;
+  bottom: 1.3vh;
+  position: fixed;
+}
+
+footer p {
+  font-family: "Ethno";
+  font-size: 0.5vw;
+  background-color: white;
+  color: #000;
+  width: 100%;
+  margin-bottom: 0;
+  position: fixed;
+}
+
+@media (max-width: 768px) {
+  .carousel-item img{
+    min-width: 350px;
+  }
+  .welcome{
+    min-width: 350px;
+  }
+  .col{
+    width: 360px;
+    margin: 0 auto;
+  }
+  .number1 img,
+  .number2 img {
+    height: 200px;
+  }
+  .number3 img,
+  .number4 img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 1000px){
+  .col{
+    width: 420px;
+    margin: 0 auto;
+  }
+}
+
