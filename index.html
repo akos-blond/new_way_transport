@@ -17,8 +17,9 @@
       href="https://fonts.googleapis.com/css2?family=Teko&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="scss/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>NEW WAY STRANSPORT KFT.</title>
   </head>
 
@@ -35,11 +36,12 @@
 
       <nav class="menu">
         <ul>
-          <li><a href="/">RÓLUNK</a></li>
-          <li><a href="/szolg.html">AJÁNLATKÉRÉS</a></li>
-          <li><a href="">GALÉRIA</a></li>
-          <li><a href="">GARANCIA</a></li>
-          <li><a href="">KAPCSOLAT</a></li>
+          <li><i class="bi bi-moon-stars-fill"></i></li>
+          <li><a href="/rolunk.html">RÓLUNK</a></li>
+          <li><a href="/ajanlatkeres.html">AJÁNLATKÉRÉS</a></li>
+          <li><a href="/galeria.html">GALÉRIA</a></li>
+          <li><a href="/garancia.html">GARANCIA</a></li>
+          <li><a href="/kapcs.html">KAPCSOLAT</a></li>
         </ul>
       </nav>
     </header>
@@ -57,29 +59,32 @@
           class="active"
           aria-current="true"
           aria-label="Slide 1"
+          style="filter: invert(1)"
         ></button>
         <button
           type="button"
           data-bs-target="#carouselCaptions"
           data-bs-slide-to="1"
           aria-label="Slide 2"
+          style="filter: invert(1)"
         ></button>
         <button
           type="button"
           data-bs-target="#carouselCaptions"
           data-bs-slide-to="2"
           aria-label="Slide 3"
+          style="filter: invert(1)"
         ></button>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item active">
+        <div class="carousel-item active" data-bs-interval="3000">
           <img src="img/10.jpg" class="d-block mx-auto w-50" alt="..." />
           <div class="carousel-caption d-none d-md-block">
             <h5>MEGBÍZHATÓSÁG</h5>
             <p>Megbízható fuvarozás belföldi és nemzetközi szinten</p>
           </div>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" data-bs-interval="3000">
           <img src="img/7-edited.jpg" class="d-block mx-auto w-50" alt="..." />
           <div class="carousel-caption d-none d-md-block">
             <h5>ELKÖTELEZETTSÉG</h5>
@@ -88,7 +93,7 @@
             </p>
           </div>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" data-bs-interval="4000">
           <img src="img/8.jpg" class="d-block mx-auto w-50" alt="..." />
           <div class="carousel-caption d-none d-md-block">
             <h5>RUGALMASSÁG</h5>
@@ -105,11 +110,16 @@
         data-bs-target="#carouselCaptions"
         data-bs-slide="prev"
       >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span
+          class="carousel-control-prev-icon"
+          style="filter: invert(1)"
+          aria-hidden="true"
+        ></span>
         <span class="visually-hidden">Previous</span>
       </button>
       <button
         class="carousel-control-next"
+        style="filter: invert(1)"
         type="button"
         data-bs-target="#carouselCaptions"
         data-bs-slide="next"
@@ -120,54 +130,80 @@
     </div>
 
     <main>
-      <div class="welcome">
+      <div class="main-title">
         <p>
           ÜDVÖZÖLJÜK A NEW WAY TRANSPORT KFT. <br />KAMIONOS FUVAROZÓ CÉG
           SZOLGÁLTATÁSAINAK VILÁGÁBAN
         </p>
-
       </div>
       <section class="mainContent">
-        <div class="row row-cols-1 row-cols-md-2 g-4 ">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
           <div class="col">
             <div class="number1 card mb-5 p-3">
-              <img src="img/handshake.jpg" class="card-img-top" alt="...">
+              <img src="img/handshake.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">Célunk</h5>
-                <p class="card-text mt-3"> Célunk, hogy ügyfeleink számára megbízható és hatékony megoldásokat kínáljunk, függetlenül attól, hogy az árujuk a kontinensen belül vagy a határokon túl utazik. <br> <br> Várjuk, hogy együttműködhessünk Önnel és partnereivel a sikeres szállítások és üzleti kapcsolatok építése érdekében.</p>
-                <a href="/ajanlatkeres.html"><button type="button">Árajánlatkérés</button></a>
+                <p class="card-text card-text-first mt-3">
+                  Célunk, hogy ügyfeleink számára megbízható és hatékony
+                  megoldásokat kínáljunk, függetlenül attól, hogy az árujuk a
+                  kontinensen belül vagy a határokon túl utazik. <br />
+                  <br />
+                  Várjuk, hogy együttműködhessünk Önnel és partnereivel a
+                  sikeres szállítások és üzleti kapcsolatok építése érdekében.
+                </p>
+                <a href="/ajanlatkeres.html"
+                  ><button type="button">Árajánlatkérés</button></a
+                >
               </div>
             </div>
           </div>
           <div class="col">
             <div class="number2 card mb-5 p-3">
-              <img src="img/logistic.jpg" class="card-img-top" alt="...">
+              <img src="img/logistic.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">irányítás</h5>
-                <p class="card-text mt-3">Széles körű nemzetközi hálózatunk lehetővé teszi, hogy globális szinten szolgáljuk ki ügyfeleinket, és a legkedvezőbb útvonalakat és megoldásokat kínáljuk minden fuvarozási igényhez. <br><br>A rugalmasság a vállalkozásunk alapelve, mely a változásokhoz történő gyors és hatékony alkalmazkodást jelenti. </p>
-                <a href="/rolunk.html"><button type="button">Tudjon meg többet Cégünkről</button></a>
+                <h5 class="card-title">Irányítás</h5>
+                <p class="card-text card-text-second mt-3">
+                  Széles körű nemzetközi hálózatunk lehetővé teszi, hogy
+                  globális szinten szolgáljuk ki ügyfeleinket, és a legkedvezőbb
+                  útvonalakat és megoldásokat kínáljuk minden fuvarozási
+                  igényhez. <br /><br />A rugalmasság a vállalkozásunk alapelve,
+                  mely a változásokhoz történő gyors és hatékony alkalmazkodást
+                  jelenti.
+                </p>
+                <a href="/rolunk.html"
+                  ><button type="button">Tudjon meg többet Cégünkről</button></a
+                >
               </div>
             </div>
           </div>
           <div class="col">
             <div class="number3 card mb-5 p-3">
-              <img src="img/scania.jpg" class="card-img-top" alt="...">
+              <img src="img/scania.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">Minőség</h5>
-                <p class="card-text mt-3">A Biztos Út: Folyamatosan Karbantartott kamionok - Minőség Minden Kilométeren! <br>
+                <p class="card-text card-text-third mt-3">
+                  A Biztos Út: Folyamatosan Karbantartott kamionok - Minőség
+                  Minden Kilométeren! <br />
                 </p>
-                <a href="/garancia.html"><button type="button">További részletek</button></a>
+                <a href="/garancia.html"
+                  ><button type="button">További részletek</button></a
+                >
               </div>
             </div>
           </div>
           <div class="col">
             <div class="number4 card mb-5 p-3">
-              <img src="img/1.jpg" class="card-img-top" alt="...">
+              <img src="img/1.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">Életforma</h5>
-                <p class="card-text mt-3">A kamionok megszállottjainak ajánjuk figyelmébe Galériánk tartalmát:</p>
+                <p class="card-text card-text-forth mt-3">
+                  A kamionok megszállottjainak ajánjuk figyelmébe Galériánk
+                  tartalmát:
+                </p>
 
-                <a href="/galeria.html"><button type="button">Kattints ide</button></a>
+                <a href="/galeria.html"
+                  ><button type="button">Kattints ide</button></a
+                >
               </div>
             </div>
           </div>

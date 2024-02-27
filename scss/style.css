@@ -1,0 +1,334 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Ethno";
+  src: url("/font/ethnocentric rg.otf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .carousel-item img {
+    min-width: 350px;
+  }
+  main {
+    width: 100%;
+  }
+  .welcome {
+    min-width: 320px;
+  }
+  .welcome p {
+    margin: 10px 0;
+    font-size: x-small;
+  }
+  h5 {
+    font-size: x-small;
+  }
+  .row {
+    width: 320px;
+    margin: 0 auto;
+  }
+  .card-text {
+    font-size: xx-small;
+    height: 140px;
+  }
+  button {
+    font-size: xx-small;
+  }
+  .number1 img,
+  .number2 img {
+    height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .number3 img,
+  .number4 img {
+    height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  footer {
+    font-size: 6px;
+    bottom: 8px;
+  }
+  footer p {
+    font-size: 6px;
+  }
+}
+@media (max-width: 992px) {
+  .col {
+    width: 420px;
+    margin: 10px auto;
+  }
+  .number3 img,
+  .number4 img {
+    height: 250px;
+  }
+  .card-text-first,
+  .card-text-second {
+    height: 140px;
+  }
+  .card-text-third,
+  .card-text-forth {
+    height: 80px;
+  }
+}
+@media (min-width: 993px) {
+  .number3 img,
+  .number4 img {
+    height: 40vh;
+  }
+  .card-text-first,
+  .card-text-second {
+    height: 180px;
+  }
+  .card-text-third,
+  .card-text-forth {
+    height: 80px;
+  }
+}
+body {
+  background-image: linear-gradient(rgb(255, 255, 255), rgba(43, 19, 59, 0.5)), url(/img/background.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+header {
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  padding: 10px;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header nav {
+  font-size: 1rem;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+
+header img {
+  width: 25vh;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+header a {
+  font-family: "Ethno";
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  color: rgb(75, 35, 102);
+  font-size: 1.5vh;
+}
+
+header i {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(43, 19, 59, 0.5);
+}
+
+header i:hover {
+  background-color: rgba(43, 19, 59, 0.5);
+  cursor: pointer;
+  color: #fff;
+}
+
+header .menu a:hover {
+  background: rgba(43, 19, 59, 0.5);
+  color: aliceblue;
+  border-radius: 5px;
+}
+
+main {
+  padding: 1vw 10vw;
+  text-align: center;
+  width: 100%;
+}
+
+/*hamburger menu*/
+header .toggle-menu,
+header .toggle-menu + label {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  header .menu {
+    grid-column: span 2;
+    display: none;
+  }
+  header .toggle-menu + label {
+    display: flex;
+    flex-direction: column;
+    justify-self: end;
+    gap: 8px;
+    width: 30px;
+  }
+  header .toggle-menu + label span {
+    display: block;
+    background: black;
+    height: 5px;
+  }
+  header .toggle-menu:checked ~ .menu {
+    display: block;
+  }
+  header ul .submenu {
+    position: static;
+    padding-left: 40px;
+  }
+  header ul {
+    display: block;
+  }
+}
+/* Oldal tartalma */
+.carousel-caption {
+  padding-left: 11%;
+}
+
+h5 {
+  font-family: "Ethno";
+  background-color: black;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  font-size: 1.5vw;
+}
+
+.carousel-caption p {
+  font-family: "Ethno";
+  background-color: white;
+  color: #000;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  font-size: 0.8vw;
+  text-align: left;
+}
+
+.main-title {
+  font-family: "Ethno";
+  text-align: center;
+  color: white;
+  margin: 10px 0 40px 0;
+  font-size: 1.5vw;
+  text-shadow: 2px 4px 3px black;
+  transform: skew(-20deg);
+  border-bottom: 0.5vw solid #fff;
+  border-right: 0.5vw solid #fff;
+  background-color: rgba(43, 19, 59, 0.9);
+  box-shadow: 8px 8px 20px #000;
+}
+
+.mainContent {
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+}
+
+.card {
+  border-radius: 10px;
+  background-color: ghostwhite;
+  box-shadow: 12px 12px 9px 1px rgba(0, 0, 0, 0.4);
+  margin-right: 20px;
+  height: 100%;
+}
+
+.number1 img,
+.number2 img {
+  border-radius: 6px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.number3 img,
+.number4 img {
+  border-radius: 6px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card-title {
+  background: none;
+  color: rgb(75, 35, 102);
+}
+
+.card-text {
+  font-size: 1.1vw;
+  text-align: justify;
+  font-weight: 500;
+  height: 250px;
+}
+
+button {
+  margin-top: 2.5vw;
+  font-family: "Ethno";
+  font-size: 0.8vw;
+  padding: 5px;
+  background-color: rgb(75, 35, 102);
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+footer {
+  font-family: "Ethno";
+  color: white;
+  text-shadow: 2px 3px 6px black;
+  text-align: center;
+  font-size: xx-small;
+  letter-spacing: 2px;
+  background-color: rgba(43, 19, 59, 0.9);
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  bottom: 12px;
+  position: fixed;
+}
+
+footer p {
+  font-family: "Ethno";
+  font-size: xx-small;
+  background-color: white;
+  color: #000;
+  width: 100%;
+  position: fixed;
+}
+
+/* --- RÓLUNK ---*/
+.leader {
+  margin: 1vw;
+  height: 22vw;
+  float: right;
+  background-image: url(img/imike.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.story-container {
+  margin: 0 auto;
+  padding: 3vh;
+  border-radius: 10px;
+  background-color: ghostwhite;
+  box-shadow: 12px 12px 9px 1px rgba(0, 0, 0, 0.4);
+  display: inline-block;
+}
+
+.story-text {
+  font-size: 1.2vw;
+  text-align: justify;
+  font-weight: 500;
+  text-align: justify;
+}/*# sourceMappingURL=style.css.map */
