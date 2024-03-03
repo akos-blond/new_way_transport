@@ -1,258 +1,391 @@
 @font-face {
-    font-family: "Ethno";
-    src: url("/font/ethnocentric\ rg.otf");
-  }
-  @import "resets";
-  @import "variables";
-  @import "media";
-  
-  body {
-    background-image: $body-background-lightmode,
-      url(/img/background.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    min-height: 100vh;
-  }
-  
-  header {
-    background-color: $header-bgcolor-lightmode;
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    padding: 10px;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  
-  header nav {
-    font-size: 1rem;
-  }
-  
-  header ul {
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-  }
-  
-  header img {
-    width: 25vh;
-    background-color: $logo-bg-lightmode;
-    border-radius: 10px;
-  }
-  
-  header a {
-    font-family: "Ethno";
-    text-decoration: none;
-    display: block;
-    padding: 10px;
-    color: $text-purple-color;
-    font-size: 1.5vh;
-  }
-  
-  header i{
-    padding: 8px 10px;
-    border-radius: 10px;
-    border: 1px solid $header-btn-bg-color-lightmode;
-  }
-  
-  header i:hover{
-    background-color: $header-btn-bg-color-lightmode;
-    cursor: pointer;
-    color: #fff;
-  
-  }
-  
-  header .menu a:hover {
-    background: $header-btn-bg-color-lightmode;
-    color: aliceblue;
-    border-radius: 5px;
-  }
-  
-  main {
-    padding: 1vw 10vw;
-    text-align: center;
-    width: 100%;
-  }
-  /*hamburger menu*/
-  
-  header .toggle-menu,
-  header .toggle-menu + label {
+  font-family: "Ethno";
+  src: url("/font/ethnocentric\ rg.otf");
+}
+@import "resets";
+@import "media";
+
+body {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #d7d7d7;
+  background-image: linear-gradient(147deg, #d7d7d7 0%, #353535 74%);
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  padding: 10px;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 2px 2px 50px black;
+}
+
+header nav {
+  font-size: 1rem;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+
+header img {
+  width: 25vh;
+  border-radius: 10px;
+}
+
+header a {
+  font-family: "Ethno";
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  color: white;
+  font-size: 1.5vh;
+  text-shadow: 2px 2px 1px black;
+}
+
+header i {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid white;
+  box-shadow: 1px 1px 20px white;
+}
+
+header i:hover {
+  background-color: #737373;
+  cursor: pointer;
+  color: #fff;
+}
+
+header .menu a:hover {
+  background: #535353;
+  box-shadow: 1px 1px 10px white;
+  color: rgb(255, 255, 255);
+  border-radius: 30px;
+}
+
+main {
+  padding: 1vw 10vw;
+  text-align: center;
+  width: 100%;
+}
+/*hamburger menu*/
+
+header .toggle-menu,
+header .toggle-menu + label {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  header .menu {
+    grid-column: span 2;
     display: none;
   }
-  
-  @media (max-width: 1100px) {
-    header .menu {
-      grid-column: span 2;
-      display: none;
-    }
-  
-    header .toggle-menu + label {
-      display: flex;
-      flex-direction: column;
-      justify-self: end;
-      gap: 8px;
-      width: 30px;
-    }
-  
-    header .toggle-menu + label span {
-      display: block;
-      background: black;
-      height: 5px;
-    }
-  
-    header .toggle-menu:checked ~ .menu {
-      display: block;
-    }
-  
-    header ul .submenu {
-      position: static;
-      padding-left: 40px;
-    }
-  
-    header ul {
-      display: block;
-    }
-  }
-  
-  /* Oldal tartalma */
-  
-  .carousel-caption {
-    padding-left: 11%;
-  }
-  
-  h5 {
-    font-family: "Ethno";
-    background-color: black;
-    max-width: fit-content;
-    font-size: 1.5vw;
-  }
-  
-  .carousel-caption p {
-    font-family: "Ethno";
-    background-color: white;
-    color: #000;
-    max-width: fit-content;
-    font-size: 0.8vw;
-    text-align: left;
-  }
-  
-  .main-title {
-    font-family: "Ethno";
-    text-align: center;
-    color: white;
-    margin: 10px 0 40px 0;
-    font-size: 1.5vw;
-    text-shadow: 2px 4px 3px black;
-    transform: skew(-20deg);
-    border-bottom: 0.5vw solid #fff;
-    border-right: 0.5vw solid #fff;
-    background-color: rgba(43, 19, 59, 0.9);
-    box-shadow: 8px 8px 20px #000;
-  }
-  .mainContent {
-    max-width: 100%;
-    margin: 0 auto;
-    display: grid;
-  }
-  
-  .card {
-    border-radius: 10px;
-    background-color: ghostwhite;
-    box-shadow: 12px 12px 9px 1px rgba(0, 0, 0, 0.4);
-    margin-right: 20px;
-    height: 100%;
-  }
-  
-  
-  .number1 img,
-  .number2 img {
-    border-radius: 6px;
-    height: 300px;
-    object-fit: cover;
-  }
-  
-  .number3 img,
-  .number4 img {
-    border-radius: 6px;
-    height: 500px;
-    object-fit: cover;
-  }
-  
-  .card-title {
-    background: none;
-    color: rgb(75, 35, 102);
-  }
-  
-  .card-text {
-    font-size: 1.1vw;
-    text-align: justify;
-    font-weight: 500;
-    height: 250px;
-  }
-  
-  button{
-    margin-top: 2.5vw;
-    font-family: "Ethno";
-    font-size: 0.8vw;
-    padding: 5px;
-    background-color: $text-purple-color;
-    color: white;
-    border-radius: 10px;
-    text-align: center;
-  }
-  
-  footer {
-    font-family: "Ethno";
-    color: white;
-    text-shadow: 2px 3px 6px black;
-    text-align: center;
-    font-size: xx-small;
-    letter-spacing: 2px;
-    background-color: rgba(43, 19, 59, 0.9);
-    width: 100%;
-    height: max-content;
-    bottom: 12px;
-    position: fixed;
-  }
-  
-  footer p {
-    font-family: "Ethno";
-    font-size: xx-small;
-    background-color: white;
-    color: #000;
-    width: 100%;
-    position: fixed;
+
+  header .toggle-menu + label {
+    display: flex;
+    flex-direction: column;
+    justify-self: end;
+    gap: 8px;
+    width: 30px;
   }
 
-  
-  /* --- RÓLUNK ---*/
-  .leader{
-    margin: 1vw;
-    height: 22vw;
-    float: right;
-    background-image: url(img/imike.jpg);
-    background-size: cover;
-    background-position:center;
-    border-radius: 10px;
+  header .toggle-menu + label span {
+    display: block;
+    background: rgb(255, 255, 255);
+    height: 5px;
   }
-  
-  .story-container {
-    margin: 0 auto;
-    padding: 3vh;
-    border-radius: 10px;
-    background-color: ghostwhite;
-    box-shadow: 12px 12px 9px 1px rgba(0, 0, 0, 0.4);
-    display: inline-block;
+
+  header .toggle-menu:checked ~ .menu {
+    display: block;
   }
-  
-  .story-text {
-    font-size: 1.2vw;
-    text-align: justify;
-    font-weight: 500;
-    text-align: justify;
+
+  header ul .submenu {
+    position: static;
+    padding-left: 40px;
   }
-  
-  
+
+  header ul {
+    display: block;
+  }
+}
+
+/* Oldal tartalma */
+
+.carousel-caption {
+  padding-left: 11%;
+}
+
+h5 {
+  font-family: "Ethno";
+  background-color: black;
+  max-width: fit-content;
+  font-size: 1.5vw;
+}
+
+.carousel-caption p {
+  font-family: "Ethno";
+  background-color: white;
+  color: #000;
+  max-width: fit-content;
+  font-size: 0.8vw;
+  text-align: left;
+}
+
+.main-title {
+  font-family: "Ethno";
+  text-align: center;
+  color: white;
+  margin: 10px 0 40px 0;
+  font-size: 1.5vw;
+  text-shadow: 2px 4px 3px black;
+  transform: skew(-20deg);
+  border-bottom: 0.2vw solid #fff;
+  border-right: 0.2vw solid #fff;
+  background-color: linear-gradient(147deg, #d7d7d7 0%, #353535 74%);
+  box-shadow: 8px 8px 20px #000;
+}
+.main-title p {
+  margin: auto;
+}
+.mainContent {
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+}
+
+.card {
+  border-radius: 10px;
+  border: 1px solid white;
+  background-color: ghostwhite;
+  box-shadow: 12px 12px 9px 1px rgba(0, 0, 0, 0.4);
+  margin-right: 20px;
+  height: 100%;
+}
+
+.number1 img,
+.number2 img {
+  border-radius: 6px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.number3 img,
+.number4 img {
+  border-radius: 6px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.card-title {
+  background: none;
+  color: #535353;
+}
+
+.card-text {
+  font-size: 1.1vw;
+  text-align: justify;
+  font-weight: 500;
+  height: 250px;
+}
+
+button {
+  margin-top: 2.5vw;
+  font-family: "Ethno";
+  font-size: 0.8vw;
+  padding: 5px;
+  background-color: #535353;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+button:not(#indicator1, #indicator2, #indicator3):hover {
+  box-shadow: 3px 3px 10px rgb(0, 0, 0);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  box-shadow: none !important;
+}
+
+footer {
+  font-family: "Ethno";
+  color: white;
+  text-shadow: 2px 3px 6px black;
+  text-align: center;
+  font-size: xx-small;
+  letter-spacing: 2px;
+  background-color: #535353;
+  width: 100%;
+  height: max-content;
+  bottom: 12px;
+  position: fixed;
+}
+
+footer p {
+  font-family: "Ethno";
+  font-size: xx-small;
+  background-color: white;
+  color: #000;
+  width: 100%;
+  position: fixed;
+}
+
+/* --- RÓLUNK ---*/
+
+.story-container {
+  margin: 0 auto;
+  padding: 3vh;
+  border-radius: 10px;
+  border: 1px solid white;
+  background-color: ghostwhite;
+  box-shadow: 12px 12px 9px 1px rgba(0, 0, 0, 0.4);
+  display: inline-block;
+}
+
+.story-text {
+  font-size: 3vh;
+  text-align: justify;
+  font-weight: 500;
+  text-align: justify;
+}
+
+/* --- GALÉRIA ---*/
+
+.container {
+  max-width: 150vh;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.kep {
+  width: 20vh;
+  height: 20vh;
+  margin: 1vh;
+}
+.kep img {
+  width: 18vh;
+  height: 18vh;
+  box-shadow: 2px 2px 5px #000;
+  transition: all 0.3s;
+}
+.kep img:hover {
+  box-shadow: 5px 5px 10px #000;
+  transform: scale(1.1);
+  transition: all 0.3s;
+}
+
+/* --- NAGYKÉPEK ---*/
+.galeria2 {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 80vh;
+  margin: auto;
+}
+.nagy_kepek {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70vh;
+  height: 70vh;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 5px 5px 10px #000;
+  position: relative;
+  border-radius: 10px;
+}
+.nagy_kepek img {
+  position: absolute;
+  width: 68vh;
+  height: 68vh;
+}
+.arrow_left img,
+.arrow_right img {
+  width: 4vh;
+  transition: all 0.3s;
+}
+.arrow_left img:hover,
+.arrow_right img:hover {
+  transform: scale(1.1);
+  transition: all 0.3s;
+}
+#kepalairas {
+  font-family: "Ethno";
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+/*--- GARANCIA ---*/
+
+.guarantee {
+  margin: 0 auto;
+  padding: 3vh;
+  border-radius: 10px;
+  border: 1px solid white;
+  background-color: ghostwhite;
+  box-shadow: 12px 12px 9px 1px rgba(0, 0, 0, 0.4);
+  display: inline-block;
+  text-align: center;
+}
+
+#more {
+  display: none;
+}
+
+.story-text a {
+  font-style: italic;
+  font-size: 2.5vh;
+}
+
+.story-text img{
+  height: 30vh;
+}
+
+/*--- KAPCSOLAT ---*/
+
+.contact-container {
+  text-align: center;
+  width: 100vh;
+  height: 70vh;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 1px solid white;
+  background-color: ghostwhite;
+  box-shadow: 12px 12px 9px 1px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+table {
+  width: 100vh;
+  font-size: 2vh;
+  margin: 5vh auto;
+}
+th {
+  text-align: end;
+}
+td {
+  padding-left: 10vh;
+  text-align: start;
+}
+.responsive-iframe {
+  width: 50%;
+  height: 50%;
+}

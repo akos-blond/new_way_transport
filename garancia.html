@@ -19,13 +19,18 @@
     />
     <link rel="stylesheet" href="scss/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <title>NEW WAY STRANSPORT KFT.</title>
   </head>
 
   <body>
-    <header>
-      <a href="/"><img src="img/logo-transparent.png" alt="" /></a>
+    <header id="header">
+      <a href="/"
+        ><img id="logo" src="img/logo-transparent-white.png" alt=""
+      /></a>
 
       <input type="checkbox" id="toggle-menu" class="toggle-menu" />
       <label for="toggle-menu">
@@ -36,20 +41,66 @@
 
       <nav class="menu">
         <ul>
-          <li><i class="bi bi-moon-stars-fill"></i></li>
+          <li><i id="switch" class="bi bi-moon-stars-fill"></i></li>
           <li><a href="/rolunk.html">RÓLUNK</a></li>
-          <li><a href="/ajanlatkeres.html">AJÁNLATKÉRÉS</a></li>
           <li><a href="/galeria.html">GALÉRIA</a></li>
           <li><a href="/garancia.html">GARANCIA</a></li>
-          <li><a href="/kapcs.html">KAPCSOLAT</a></li>
+          <li><a href="/kapcsolat.html">KAPCSOLAT</a></li>
         </ul>
       </nav>
     </header>
 
+    <div class="container">
+      <div class="main-title">
+        <p>Garancia</p>
+      </div>
 
-  <footer>
-    &copy; 2021 NEW WAY STRANSPORT KFT. - Minden jog fenntartva.
-    <p>Created by:Szőke Ákos Norbert</p>
-  </footer>
-</body>
+      <div class="guarantee">
+        <p class="story-text" style="text-align: center;" >
+          Vezetünk a megbízhatóság útján, és büszkén állítjuk, hogy minden
+          szállítmányunk biztonságosan és időben ér célba.<span id="dots"
+            >..</span
+          ><span id="more">
+            <br>
+            <img id="scania" src="img/scania_logo.png" alt="" />
+            <br /><br />
+            Scania, a megbízhatóság ikonja. Kamionjaink nem csak úthengerként
+            robognak előre, hanem olyan értékekkel is rendelkeznek, amelyek a
+            szállítmányozás művészetét képviselik. A Scania márkával való
+            együttműködésünk garantálja, hogy minden fuvar biztonságos és
+            hatékony lesz.  Modern és jól karbantartott
+            flottánk nem csak az utak királynője, hanem az ügyfeleink
+            elégedettségének garanciája is. <br /><br />
+
+            <a class="scania-link" href="https://www.scania.com/hu/hu/home.html"
+              >Ha több információt szeretnél tudni a Scania márkával
+              kapcsolatosan, kattints ide.</a
+            >
+            <br /><br />
+            TOVÁBBÁ...
+            <br /><br />
+            Sofőrjeink egytől egyig tapasztalt, képzett dolgozók, hosszú évek tapasztalatával a hátuk mögött. A gyors, pontos szállítás számukra nem kérdés, így a váratlan helyzetek sem állhatják útjukat. Nem csupán áruk szállítását végzünk,
+            hanem egy teljes bizalommal és minőséggel teli élményt is szállítunk
+            Önnek.
+            <br /><br />
+
+            Ha minőséget, megbízhatóságot és hatékonyságot keres, akkor ne
+            keressen tovább. Mi vagyunk az Ön partnere az utakon, és minden
+            egyes kamionunkkal bebizonyítjuk, hogy a cél eléréséhez nem csak egy
+            út vezet, hanem egy Scania vezet!
+          </span>
+        </p>
+
+        <button onclick="OlvasdTovabb()" id="btn-more">
+          Hogy a titok miben rejlik?
+        </button>
+      </div>
+    </div>
+
+    <footer>
+      &copy; 2021 NEW WAY STRANSPORT KFT. - Minden jog fenntartva.
+      <p>Created by:Szőke Ákos Norbert</p>
+    </footer>
+  </body>
+  <script src="garancia.js"></script>
 </html>
